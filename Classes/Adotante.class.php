@@ -10,35 +10,50 @@ class Adotante{
     public $animaladotado;
 
     public function exibirAdotante(): string{
-        return "...";
+        return "Nome: {$this->nome}.";
     }
 
     public function adotarAnimal(): string{
-        return "...";
+        return "Quer adotar um {$this->animaladotado}.";
     }
 
     public function verificarIdade(): string{
-        return "...";
-    }
-
-    public function temExperiencia(): string{
-        return "...";
-    }
-
-    public function listarContato(): string{
-        return "...";
+        if ($this->idade < 18){
+            return "Não pode adotar.";
+        }
+        else{
+            return "Pode adotar.";
+        }
     }
 
     public function verificarOutrosAnimais(): string{
-        return "...";
+        if ($temoutrosanimais = 'não'){
+            return "Não tem outros animais.";
+        }
+        else{
+            return "Tem outros animais.";
+        }
+    }
+
+    public function listarContato(): string{
+        return "Telfone: {$this->telefone}; E-mail: {$this->email}.";
+    }
+
+    public function temExperiencia(): string{
+        if ($experienciacompets = 'não'){
+            return "Não tem experiência.";
+        }
+        else{
+            return "Tem experiência.";
+        }
     }
 
     public function cancelarAdocao(): string{
-        return "...";
+        return "Animal adotado e removido da lista!";
     }
 
     public function resumoAdotante(): string{
-        return "...";
+        return "O nome do adotante é {$this->nome} e seu animal é {$this->animaladotado}.";
     }
 }
 ?>

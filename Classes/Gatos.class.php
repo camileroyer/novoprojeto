@@ -10,35 +10,36 @@ class Gato{
     public $usacaixadeareia;
 
     public function exibirGato(): string{
-        return "...";
+        return "Nome: {$this->nome}";
     }
 
     public function castrar(): string{
-        return "...";
+        return "Ele é {$this->castrado}";
     }
 
     public function verificarPelagem(): string{
-        return "...";
+        return "Ele é {$this->pelagem}";
     }
 
-    public function atualizarIndependencia(): string{
-        return "...";
+    public function grauIndependencia($grau):string{
+    $this->grauIndependencia= $grau;
+    return "{$this->grauIndependencia}.";
     }
 
     public function vacinar(): string{
-        return "...";
+        return "Ele é {$this->vacinado}.";
     }
 
     public function resumoGato(): string{
-        return "...";
+        return "O nome do gato é {$this->nome}, ele é {$this->pelagem} e {$this->curioso}.";
     }
 
     public function encaixarCaixaAreia(): string{
-        return "...";
+        return "Ele {$usacaixadeareia} caixa de areia.";
     }
 
     public function verificarContato(): string{
-        return "...";
+        return "Ele {$this->adoracolo} colo.";
     }
 }
 ?>

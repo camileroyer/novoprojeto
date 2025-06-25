@@ -1,6 +1,7 @@
 <?php
-class Cachorro{
+class Cachorro extends Animais{
     public $nome;
+    public $especie;
     public $raca;
     public $porte;
     public $nivelenergia;
@@ -10,35 +11,36 @@ class Cachorro{
     public $adestrado;
 
     public function exibirCachorro(): string{
-        return "...";
+        return "Nome: {$this->nome}.";
     }
 
     public function vacinar(): string{
-        return "...";
+        return "Ele é {$this->vacinado}.";
     }
 
     public function verificarAdestramento(): string{
-        return "...";
+        return "Ele é {$this->adestrado}";
     }
 
-    public function atualizarNivelEnergia(): string{
-        return "...";
+    public function atualizarNivelEnergia($valor):string{
+        $this->nivelEnergia= $valor;
+        return "{$this->nivelEnergia}.";
     }
 
     public function indicarPorte(): string{
-        return "...";
+        return "O porte é {$this->porte}.";
     }
 
     public function socializar(): string{
-        return "...";
+        return "Ele é {$this->sociavel}";
     }
 
     public function iniciarAdestramento(): string{
-        return "...";
+        return "??";
     }
 
     public function resumoCachorro(): string{
-        return "...";
+        return "O nome do cachorro é {$this->nome}, seu porte é {$this->porte} e é da raça {$this->raca}.";
     }
-}
+    }
 ?>
